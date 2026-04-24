@@ -1,0 +1,8 @@
+{
+    // Configuração do Live Server
+    
+    "liveServer.settings.port": 5500 
+    // Define a porta que o servidor local vai usar
+    // Ou seja, o site vai abrir em:
+    // http://localhost:5500
+}

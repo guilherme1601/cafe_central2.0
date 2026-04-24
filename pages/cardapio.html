@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- Título da aba do navegador -->
+        <title>Cardápio</title>
+
+        <!-- Permite usar acentos corretamente -->
+        <meta charset="UTF-8">
+
+        <!-- Deixa o site responsivo (funciona bem no celular) -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Importa o CSS principal -->
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body>
+
+        <header class="topo"> 
+
+            <!-- Logo do site -->
+            <div class="logo">
+                <a href="../index.html">Café<span>Central</span></a>
+            </div>
+
+            <!-- Menu de navegação -->
+            <nav class="menu">
+                <a href="../index.html">Início</a>
+                <a href="../pages/sobre.html">Sobre</a>
+
+                <!-- Página atual com classe ativa -->
+                <a href="../pages/cardapio.html" class="ativo">Cardápio</a>
+
+                <a href="../pages/contato.html">Contato</a>
+                <a href="../pages/login.html">Login</a>
+            </nav>
+        </header>
+
+
+        <main>
+
+            <!-- Seção do cardápio -->
+            <section class="Cardapio">
+
+                <!-- Título da seção -->
+                <h2>Cardápio do Café Central</h2>
+
+                <!-- Descrição -->
+                <p>
+                    Sabores quentes e fresquinhos para começar bem o dia. 
+                    Aproveite nossos cafés especiais, lanches artesanais e opções de acompanhamento.
+                </p>
+
+                <!-- Container dos produtos -->
+                <div class="cardapio-grid" id="ListaCardapio">
+
+                </div>
+
+            </section>
+        
+        </main>
+
+        <!-- ================= RODAPÉ ================= -->
+        <footer class="rodape">
+            <p>® 2026 Café Central. Todos os Direitos Reservados</p>
+            <p><a href="../pages/contato.html">Entre em Contato</a></p>
+        </footer>
+
+        <!-- Conecta o JavaScript -->
+        <script src="../js/cardapio.js"></script>
+
+    </body>
+</html>

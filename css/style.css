@@ -1,0 +1,286 @@
+/* ================= GERAL ================= */
+
+/* Define altura total da página e remove espaços padrão */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Configuração geral do site */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* fonte do site */
+    color: rgb(24, 24, 24); /* cor do texto */
+    background-color: rgb(252, 252, 252); /* cor de fundo */
+    
+    display: flex; /* ativa flexbox */
+    flex-direction: column; /* organiza em coluna (vertical) */
+}
+
+/* Faz o conteúdo ocupar o espaço e empurrar o rodapé para baixo */
+main {
+    flex: 1; /* ocupa o espaço disponível */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ================= TEXTOS ================= */
+
+/* Estilo dos títulos */
+h1, h2, h3 {
+    color: rgb(95, 80, 48); /* cor marrom */
+    text-align: center; /* centraliza */
+}
+
+/* Estilo dos parágrafos */
+p {
+    line-height: 1.5; /* espaçamento entre linhas */
+    margin: 10px 0; /* espaço acima e abaixo */
+    text-align: center; /* centraliza */
+}
+
+/* ================= HEADER ================= */
+
+/* Estilo do cabeçalho */
+header {
+    background-color: rgba(133, 67, 5, 0.815); /* fundo marrom */
+    padding: 20px 0; /* espaçamento interno */
+    text-align: center;
+}
+
+/* Logo (link principal) */
+.logo a {
+    text-decoration: none; /* remove sublinhado */
+    color: #fff; /* branco */
+    font-size: 25px; /* tamanho */
+    font-weight: bold; /* negrito */
+}
+
+/* Parte destacada da logo */
+.logo span {
+    color: rgba(177, 136, 3, 0.788); /* dourado */
+}
+
+/* ================= MENU ================= */
+
+/* Espaçamento do menu */
+nav.menu {
+    margin-top: 10px;
+}
+
+/* Links do menu */
+nav.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px; /* espaço lateral */
+    font-weight: bold;
+}
+
+/* Link ativo (página atual) */
+nav.menu a.ativo {
+    color: rgba(177, 136, 3, 0.788);
+    text-decoration: underline;
+}
+
+/* Efeito ao passar o mouse */
+nav.menu a:hover {
+    color: rgba(177, 136, 3, 0.788);
+}
+
+/* ================= HERO ================= */
+
+/* Seção principal da página inicial */
+.hero {
+    background-color: white;
+    text-align: center;
+    padding: 60px 25px; /* espaço interno */
+}
+
+/* Título principal */
+.hero h1 {
+    font-size: 36px;
+    color: burlywood; /* tom de café claro */
+}
+
+/* Texto da hero */
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* ================= BOTÕES ================= */
+
+/* Botão principal */
+.btn-primario {
+    background-color: rgba(95, 44, 28, 0.788); /* marrom escuro */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px; /* borda arredondada */
+    text-decoration: none;
+    border: none;
+    cursor: pointer; /* mãozinha */
+}
+
+/* Botão secundário */
+.btn-segundario a {
+    background-color: white;
+    color: rgba(177, 136, 3, 0.788);
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid rgba(78, 37, 24, 0.788);
+}
+
+/* Efeito hover nos botões */
+.btn-primario:hover, 
+.btn-segundario a:hover {
+    opacity: 0.8; /* deixa levemente transparente */
+}
+
+/* ================= CARDÁPIO ================= */
+
+/* Container dos produtos */
+.cardapio-grid {
+    display: flex; /* coloca lado a lado */
+    gap: 20px; /* espaço entre eles */
+    flex-wrap: wrap; /* quebra linha se necessário */
+    justify-content: center; /* centraliza */
+}
+
+/* Card de produto */
+.produto {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08); /* sombra leve */
+    flex: 1 1 250px; /* tamanho mínimo */
+    transition: 0.2s; /* animação */
+}
+
+/* Imagem do produto */
+.produto img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain; /* não distorce */
+    border-radius: 6px;
+}
+
+/* Efeito ao passar o mouse */
+.produto:hover {
+    transform: translateY(-3px); /* sobe um pouco */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* ================= CONTATO ================= */
+
+/* Espaçamento da seção */
+.contato {
+    padding: 40px 20px;
+}
+
+/* Formulário */
+.contato form {
+    max-width: 500px;
+    margin: 0 auto; /* centraliza */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Inputs e textarea */
+.contato input,
+.contato textarea {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* ================= FEEDBACK ================= */
+
+/* Mensagem do formulário */
+#msgStatus {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Erro */
+#msgStatus.erro {
+    color: red;
+}
+
+/* Sucesso */
+#msgStatus.sucesso {
+    color: green;
+}
+
+/* ================= LOGIN ================= */
+
+/* Formulário de login */
+.login form {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 40px 20px;
+}
+
+/* ================= SOBRE ================= */
+
+/* Lista de diferenciais */
+.lista {
+    list-style: none; /* remove bolinhas */
+    padding: 0;
+    margin: 15px auto;
+    width: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Itens da lista */
+.lista li {
+    margin: 8px 0;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Remove bolinhas de TODAS listas */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Avaliações */
+.avaliacao {
+    margin: 10px auto;
+    max-width: 400px;
+    padding: 10px;
+    border-left: 4px solid rgba(133, 67, 5, 0.815); /* destaque lateral */
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+/* ================= RODAPÉ ================= */
+
+/* Rodapé */
+footer {
+    background-color: rgba(133, 67, 5, 0.815);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+
+    margin-top: auto; /* mantém no final da tela */
+}
+
+/* Links do rodapé */
+footer a {
+    color: rgba(10, 8, 0, 0.788);
+    text-decoration: none;
+}
